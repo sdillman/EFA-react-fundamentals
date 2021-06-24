@@ -6,43 +6,43 @@ const Resources = () => {
                 <p>Below are some of the resources that we used throughout this app. Note: You'll have one challenge where you'll be asked to make this page better.</p>
                 <ul>
                     <li>
-                        <a href="https://reactjs.org/docs/getting-started.html" target="_blank">The Official Docs
+                        <a href="https://reactjs.org/docs/getting-started.html" target="_blank" rel="noreferrer">The Official Docs
                         </a>
                     </li>
                     <li>
-                        <a href="https://reacttraining.com/react-router" target="_blank">React Router Dom
+                        <a href="https://reacttraining.com/react-router" target="_blank" rel="noreferrer">React Router Dom
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.udemy.com/course/react-js-getting-started" target="_blank">Stephen Griderʼs Udemy Course for the Udemy API
+                        <a href="https://www.udemy.com/course/react-js-getting-started" target="_blank" rel="noreferrer">Stephen Griderʼs Udemy Course for the Udemy API
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.pluralsite.com/course/react-js-getting-started" target="_blank">Samer Bunaʼs Pluralsite Course for the Github API Starter
+                        <a href="https://www.pluralsite.com/course/react-js-getting-started" target="_blank" rel="noreferrer">Samer Bunaʼs Pluralsite Course for the Github API Starter
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.udemy.com/course/react-the-guide-incl-redux" target="_blank">Maximilian Schwarzmüllerʼs Udemy Course
+                        <a href="https://www.udemy.com/course/react-the-guide-incl-redux" target="_blank" rel="noreferrer">Maximilian Schwarzmüllerʼs Udemy Course
                         </a>
                     </li>
                     <li>
-                        <a href="https://reactstrap.github.io/" target="_blank">ReactStrap for a Bootstrap Application
+                        <a href="https://reactstrap.github.io/" target="_blank" rel="noreferrer">ReactStrap for a Bootstrap Application
                         </a>
                     </li>
                     <li>
-                        <a href="https://gorangajic.github.io/react-icons/fa.html" target="_blank">Font Awesome for React
+                        <a href="https://gorangajic.github.io/react-icons/fa.html" target="_blank" rel="noreferrer">Font Awesome for React
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/bmorelli25/interactive-bitcoin-price-chart" target="_blank">Bitcoin Price Chart
+                        <a href="https://github.com/bmorelli25/interactive-bitcoin-price-chart" target="_blank" rel="noreferrer">Bitcoin Price Chart
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/mthorry/earthquakes-mapper" target="_blank">Google Maps Earthquake Mapper
+                        <a href="https://github.com/mthorry/earthquakes-mapper" target="_blank" rel="noreferrer">Google Maps Earthquake Mapper
                         </a>
                     </li>
                     <li>
-                        <a href="https://neptunian.github.io/react-photo-gallery" target="_blank">React Photo Gallery
+                        <a href="https://neptunian.github.io/react-photo-gallery" target="_blank" rel="noreferrer">React Photo Gallery
                         </a>
                     </li>
                 </ul>
