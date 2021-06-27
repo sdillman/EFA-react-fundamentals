@@ -14,7 +14,7 @@ const State = () => {
                     <dt>Triggers re-renders</dt>
                     <dd>Like with props changes, changing the state of a component re-renders the whole component</dd>
                 </ul>
-                <StateExample></StateExample>
+                <StateExample />
             </div>
         </div>
     );

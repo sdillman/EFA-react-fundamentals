@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 
 const Home = () => {
     return(
-        <div ClassName='main'>
+        <div className='main'>
             <div className='mainDiv'>
                 <h1>Welcome to React Fundamentals at Eleven Fifty</h1>
                 <p>
