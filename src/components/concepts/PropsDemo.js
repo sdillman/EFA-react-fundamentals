@@ -1,5 +1,6 @@
 import { getByDisplayValue } from '@testing-library/react';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const PropsDemo = () => {
 // Passes a prop of 'string' to a child functional component
@@ -36,15 +37,15 @@ const toggleBorderStyle = () => {
     borderStyle === 'dashed' ? setBorderStyle('solid') : setBorderStyle('dashed');
 }
 
-
     return (
         <div className='main'>
             <div className='mainDiv'>
                 <div style={styles}>
-                    <FunctionalComponent string="Wanna toggle the text color?" function={toggleColor} />
-                    <FunctionalComponent string="How 'bout the background?" function={toggleBkgndColor} />
-                    <FunctionalComponent string='Border radius?' function={toggleBorderRadius} />
-                    <FunctionalComponent string='your job to get this out there!' function={toggleBorderStyle} />
+                    <FunctionalComponent string="Wanna toggle the text color?" function={toggleColor} selectedStyle={color} />
+                    <FunctionalComponent string="How 'bout the background?" function={toggleBkgndColor} selectedStyle={backgroundColor} />
+                    <FunctionalComponent string='Border radius?' function={toggleBorderRadius} selectedStyle={borderRadius} />
+                    <FunctionalComponent string='your job to get this out there!' function={toggleBorderStyle} selectedStyle={borderStyle} />
+                    { <FunctionalComponent  /> /* This one serves up the default props of FunctionalComponent.defaultProps below */}
 
                 </div>
                 
@@ -53,9 +54,10 @@ const toggleBorderStyle = () => {
     );
 
 };
-
 export default PropsDemo;
 
+
+/* ==================================================================== */
 
 const FunctionalComponent = (props) => {
     // This is the child functional component
@@ -63,6 +65,30 @@ const FunctionalComponent = (props) => {
         <div>
             <p>{props.string}</p>
             <button onClick={props.function}>Press Me!</button>
+            <TinyComponent selectedStyle={props.selectedStyle} />
+        </div>
+    )
+}
+
+FunctionalComponent.defaultProps = {
+    string: 'This is wild!',
+    function: () => console.log('Can I see this in my dev tools?'),
+    selectedStyle: 'what selected style??'
+}
+
+FunctionalComponent.propTypes = {
+    string: PropTypes.string.isRequired,
+    function: PropTypes.func.isRequired,
+    selectedStyle: PropTypes.string.isRequired
+}
+
+/* ==================================================================== */
+
+
+const TinyComponent = (props) => {
+    return (
+        <div>
+            <p>The current style is : { props.selectedStyle } </p>
         </div>
     )
 }
