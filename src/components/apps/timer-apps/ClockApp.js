@@ -13,13 +13,15 @@ const ClockApp = () => {
         const interval = setInterval(() => {
             let date = getTimeString();
             setTime(date);
-        })
-    }, 1000);
+            }, 1000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <div>
             <h1 className = "section-title">React Clock</h1>
-            <div>{ time }</div>
+            <hr className="explanation" />
+            <p>{ time }</p>
         </div>
     );
 }
