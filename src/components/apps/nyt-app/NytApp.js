@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+// importing the child functional component NytResults in order to get access to this file's props
+import NytResults from './NytResults';
 
 const baseURL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json';
 const key = 'Sw0MNndGIDJbblTTRFH00XGXckk9qBwh';
@@ -23,8 +25,23 @@ const NytApp = () => {
     };
 
     const handleSubmit = (event) => {
-        event.preventDefault();  // prevents automatic page refresh - reminder
+        setPageNumber(0);
         fetchResults();
+        event.preventDefault();  // prevents automatic page refresh - reminder
+    }
+
+    const changePageNumber = (event, direction) => {
+        event.preventDefault()
+        if (direction === 'down') {
+            if (pageNumber > 0) {
+                setPageNumber(pageNumber - 1);
+                fetchResults();
+            }
+        }
+        if (direction === 'up') {
+            setPageNumber(pageNumber + 1);
+            fetchResults();
+        }
     }
 
     return (
@@ -42,6 +59,10 @@ const NytApp = () => {
                     <br />
                     <button className="submit">Submit search</button>
                 </form>
+                {/* // Here we go with the NytResults component! */}
+                {
+                    results.length > 0 ? <NytResults results={results} changePage={changePageNumber} /> : null
+                }
             </div>
         </div>
     );
