@@ -17,7 +17,7 @@ export default class ClassComponentDemo extends Component {
         return (
             <div className = "main">
                 <div className = "mainDiv">
-                <ClassComponentNotes />>
+                <ClassComponentNotes />
                     <h4>
                         {this.state.simpleMessage}
                     </h4>
