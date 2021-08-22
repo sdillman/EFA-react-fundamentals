@@ -6,6 +6,7 @@ import {
 
 import Home from './Home';
 import Resources from './Resources';
+import ClassComponentDemo from '../concepts/ClassComponentDemo';
 import FunctionalComponentDemo from '../concepts/FunctionalComponents/FunctionalComponentDemo';
 import JSXRules from '../concepts/JSXRules';
 import State from '../concepts/State';
@@ -20,6 +21,7 @@ const Sidebar = () => {
             <div className='sidebar-list-styling'>
                 <ul className='sidebar-list list-unstyled'>
                     <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/classcomponent'>Class Component</Link></li>
                     <li><Link to='/functionalcomponent'>Functional Component</Link></li>
                     <li><Link to='/jsxrules'>JSXRules</Link></li>
                     <li><Link to='/state'>useState</Link></li>
@@ -34,6 +36,7 @@ const Sidebar = () => {
                 <Switch>
                     <Route exact path='/home'><Home /></Route>
                     <Route exact path='/'><Home /></Route>
+                    <Route exact path='/classcomponent'><ClassComponentDemo /></Route>
                     <Route exact path='/functionalcomponent'><FunctionalComponentDemo /></Route>
                     <Route exact path='/jsxrules'><JSXRules /></Route>
                     <Route exact path='/state'><State /></Route>
