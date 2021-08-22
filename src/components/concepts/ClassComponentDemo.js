@@ -2,6 +2,8 @@
 
 // A react class component starts with an import, so let's import it:
 import React, { Component } from 'react';
+// from 1.03 CLASS COMPONENT SOLUTION we learn of how to get icons
+import { FiThumbsUp, FiThumbsDown } from 'react-icons/fi'; 
 
 // Next, we'll set up a class component and export it so that it is accessible elsewhere
 export default class ClassComponentDemo extends Component {
@@ -52,13 +54,15 @@ export default class ClassComponentDemo extends Component {
                 <hr />
                     <h3>Smash the best button for you!</h3>
                     <button onClick = { this.incrementCount }>
-                        Likes: { this.state.likesCount }
+                    <FiThumbsUp />
+                        <span> { this.state.likesCount }</span>
                     </button>
 
                     <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
-                    <button style= {{color: "red"}} onClick = { this.decrementCount }>
-                        DISlikes: { this.state.dislikesCount }
+                    <button style= {{color: "red",}} onClick = { this.decrementCount }>
+                    <FiThumbsDown />
+                        <span> { this.state.dislikesCount }</span>
                     </button>
 
                     <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net likeability: </span><span style= { likeabilityColor }>{ this.state.likeability }</span>
